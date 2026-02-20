@@ -3,10 +3,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Download } from 'lucide-react';
+import { useDownloadCount } from '@/contexts/DownloadCountContext';
 
 export function Navbar() {
   const pathname = usePathname();
-  const downloadCount = 4521;
+  const { count: downloadCount, isLoaded } = useDownloadCount();
+
+  console.log('Navbar rendered with count:', downloadCount, 'isLoaded:', isLoaded);
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -47,7 +50,7 @@ export function Navbar() {
         {/* Download Count - Right */}
         <div className="flex items-center gap-2 text-red-700 text-sm font-medium">
           <Download className="w-4 h-4" />
-          <span>{downloadCount.toLocaleString()} Downloads</span>
+          <span>{isLoaded ? downloadCount.toLocaleString() : '...'} Downloads</span>
         </div>
       </div>
     </nav>

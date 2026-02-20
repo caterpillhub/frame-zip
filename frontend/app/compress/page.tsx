@@ -3,12 +3,14 @@
 import React from 'react';
 import { Navbar } from '@/components/navbar';
 import { DynamicBackground } from '@/components/dynamic-background';
+import { useDownloadCount } from '@/contexts/DownloadCountContext';
 
 export default function CompressPage() {
   const [files, setFiles] = React.useState<FileList | null>(null);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [resultUrl, setResultUrl] = React.useState<string | null>(null);
+  const { increment: incrementDownloads } = useDownloadCount();
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setResultUrl(null);
@@ -41,6 +43,10 @@ export default function CompressPage() {
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       setResultUrl(url);
+      
+      // Increment download counter
+      console.log('Compression successful, incrementing downloads');
+      incrementDownloads();
     } catch (err: any) {
       setError(err.message || 'Compression error');
     } finally {
