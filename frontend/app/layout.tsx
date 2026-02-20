@@ -9,10 +9,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'FrameZip - Convert Movie Frames to Compressed Images',
+  title: 'FrameZip - Convert, compress, create',
   description:
-    'A lightweight Python script that transforms your folder of movie frames into a single compressed image. Simple, fast, and completely local.',
-  generator: 'v0.app',
+    'A lightweight webapp that transforms your folder of movie frames into a single compressed image.',
   themeColor: '#000000',
   icons: {
     icon: [

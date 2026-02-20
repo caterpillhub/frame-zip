@@ -23,9 +23,13 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-6 sm:py-8 mt-4 sm:mt-6">
       <div className="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto gap-4 sm:gap-0">
         {/* Logo and Download Count - Top Row */}
-        <div className="flex justify-between items-center w-full sm:w-auto">
-          <Link href="/" className="text-xl sm:text-2xl font-bold text-white hover:text-red-600 transition-colors">
-            FrameZip
+        <div className="flex justify-between items-center w-full sm:w-auto gap-4">
+          <Link href="/" className="shrink-0 hover:opacity-80 transition-opacity">
+            <img 
+              src="/framezip-logo-red.png" 
+              alt="FrameZip" 
+              className="h-10 sm:h-12 w-auto"
+            />
           </Link>
           <div className="flex sm:hidden items-center gap-1 text-red-700 text-xs font-medium whitespace-nowrap">
             <Download className="w-3 h-3" />
