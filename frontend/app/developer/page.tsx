@@ -36,14 +36,14 @@ export default function DeveloperPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center relative web-accent">
+      <section className="pt-40 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center relative web-accent">
         <div className="max-w-3xl w-full text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 text-balance">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-12 sm:mb-8 text-balance">
             Have a look!
           </h1>
 
           {/* Social Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 mb-12 sm:mb-12 px-2 sm:px-0">
             {socialLinks.map((link, i) => {
               const Icon = link.icon;
               return (
@@ -55,8 +55,8 @@ export default function DeveloperPage() {
                   className="group block p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-red-700/50 hover:shadow-lg hover:shadow-red-800/20 transition-all duration-300 transform hover:scale-105"
                 >
                   <Icon className="w-12 h-12 mb-4 mx-auto text-red-700 group-hover:text-red-600 transition-colors" />
-                  <h3 className="text-lg font-semibold">{link.name}</h3>
-                  <p className="text-sm text-gray-400 mt-2">{link.desc}</p>
+                  <h3 className="text-base sm:text-lg font-semibold">{link.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 mt-2">{link.desc}</p>
                   <div className="mt-4 text-xs text-red-700 group-hover:translate-x-1 transition-transform inline-block">
                     Visit →
                   </div>
@@ -66,11 +66,11 @@ export default function DeveloperPage() {
           </div>
 
           {/* Footer */}
-          <div className="pt-8 text-center border-t border-neutral-800">
-            <p className="text-gray-300 mb-3">
+          <div className="pt-10 sm:pt-8 text-center border-t border-neutral-800 px-2 sm:px-0">
+            <p className="text-gray-300 mb-3 text-sm sm:text-base">
               Made with passion by an indie developer. If you find this tool useful, please consider sharing it!
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-xs sm:text-sm text-gray-400">
               ◆ FrameZip - Convert, compress, create
             </p>
           </div>
