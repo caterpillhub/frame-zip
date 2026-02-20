@@ -6,7 +6,7 @@ FrameZip allows users to upload a ZIP file containing image frames and generates
 
 No local setup. No Python required. Everything runs in the cloud.
 
-**🚀 Live Link:** https://frame-zip.vercel.app/
+**⚡Live App:** https://frame-zip.vercel.app/
 
 ## 🚀 MVP Overview
 
