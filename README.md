@@ -1,3 +1,4 @@
+![License](https://img.shields.io/badge/license-MIT-green)
 # 📦 FrameZip
 
 Turn a folder of image frames into a single cinematic 16:9 composite image — directly in the browser.
